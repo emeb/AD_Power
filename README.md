@@ -29,7 +29,7 @@ it on, the threshold for this is set by a zener diode and several resistors.
 
 The bare board looks like this:
 
-![ad_pwr board](./ad_pwr_front.jpg)
+![ad_pwr board](/ad_pwr_front.jpg)
 
 and is available from OSHpark for a small fee.
 
