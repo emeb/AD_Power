@@ -16,7 +16,7 @@ supply and hold it off until the -12V begins to rise.
 
 I have prototyped a small PCB with the proper circuitry for this which can be
 added into the power supply cable. The design info is available here if you are
-able to DIY such things. I do not manufactur or sell these.
+able to DIY such things. I do not manufacture or sell these myself.
 
 ## Hardware
 
@@ -25,7 +25,7 @@ SMT components. The theory of operation is simple - a P-channel MOSFET in the
 +12V rail is held in the OFF state until the -12V rail drop low enough to turn
 it on, the threshold for this is set by a zener diode and several resistors.
 
-[ad_pwr board](ad_pwr_schematic.pdf)
+[ad_pwr schematic](ad_pwr_schematic.pdf)
 
 The bare board looks like this:
 
