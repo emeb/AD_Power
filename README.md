@@ -5,14 +5,16 @@ A Power Conditioner for Audio Damage Eurorack modules.
 
 At one time Audio Damage manufactured and sold a line of Eurorack synthesizer
 modules which provided a range of unique functions. Many of these modules are
-based on the STM32F4 series of microcontrollers and suffer from a power supply
-sequencing issue that causes the CPU to hang up when power is applied.
+based on the STM32F4 series of microcontrollers and suffer from a power
+sequencing issue that causes the CPU to hang up when powered from some types of
+power supplies. It doesn't happen with just any supply, but if you happen to
+use one that causes the issue it can be quite frustrating.
 
-The problem arises when the -12V supply stabilizes more slowly than the +12V -
+The problem arises when the -12V rail stabilizes more slowly than the +12V rail -
 a sneak path through the input buffer op-amps and codec power supply locks up the
 MCU in a way which cannot be recovered without power cycling. The only way to
 prevent this without modifying the module is to insert a switch into the +12V
-supply and hold it off until the -12V begins to rise.
+rail and hold it off until the -12V rail stabilizes.
 
 I have prototyped a small PCB with the proper circuitry for this which can be
 added into the power supply cable. The design info is available here if you are
@@ -22,7 +24,7 @@ able to DIY such things. I do not manufacture or sell these myself.
 
 The design is very simple, consisting of just a board, two connectors and four
 SMT components. The theory of operation is simple - a P-channel MOSFET in the
-+12V rail is held in the OFF state until the -12V rail drop low enough to turn
++12V rail is held in the OFF state until the -12V rail drops low enough to turn
 it on, the threshold for this is set by a zener diode and several resistors.
 
 [ad_pwr schematic](ad_pwr_schematic.pdf)
